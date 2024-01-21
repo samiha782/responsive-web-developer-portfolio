@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
 }
 /* common shared styles */
 body {
@@ -195,4 +196,72 @@ textarea {
   background: #fff;
   border: 0;
   width: 100%;
+}
+
+/* responsive styles */
+
+/* mobile devices */
+.hide {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .header {
+    background-image: none;
+  }
+  nav,
+  nav > ul,
+  .banner,
+  .skills-container,
+  .resume-container,
+  footer,
+  .about-info-container {
+    flex-direction: column;
+    margin: 0px;
+  }
+  nav > ul {
+    gap: 10px;
+  }
+  .banner .profile-pic {
+    width: 100%;
+  }
+  .banner,
+  #what-i-do-description {
+    padding: 20px;
+  }
+  .skill-title {
+    padding: 0px;
+  }
+  footer,
+  .about {
+    padding: 10px;
+  }
+  .footer-column {
+    width: 100%;
+  }
+  .contact input[type='text'],
+  .contact input[type='email'],
+  textarea {
+    width: 70%;
+  }
+  .about-info-container {
+    gap: 8px;
+    padding-top: 15px;
+  }
+  .btn-primary {
+    margin-bottom: 9px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 960px) {
+  .skills-container,
+  .resume-container {
+    flex-direction: column;
+  }
+  footer {
+    padding: 30px;
+  }
+  .contact input[type='text'],
+  .contact input[type='email'],
+  textarea {
+    width: 70%;
+  }
 }
